@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.deux.css" rel="stylesheet" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.deux.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="/phonegap.js" type="text/javascript"></script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page" class="background" >
+	<div data-role="header">
+		<h1>Campus Life Card</h1>
+	</div>
+    <div class="logo">
+    <figure><img src="jquery-mobile/images/logo.png" alt="Campus Life"></img>
+    </figure>
+    </div>
+
+	<div data-role="content">	
+    <h4 class="heading">Select Your Option</h4>
+		<ul data-role="listview"  data-theme="a" class="menu">
+			<li><a href="#apply" data-transition="slide" data-transition="flip">Apply For a Card</a></li>
+            <li><a href="#agent" data-transition="slide" data-transition="slidedown">Become Ambassador</a></li>
+			<li><a href="#about" data-transition="slide" data-transition="slide">About</a></li>
+		</ul>		
+	</div>
+</div>
+
+
+<div data-role="page" id="apply" class="background">
+
+	<div data-role="header"><a href="#page" data-transition="slide">Back</a>
+	<h1>Applying For a Card</h1>
+	</div>
+	<div data-role="content">	
+	<h4 class="heading">Campus Life Account</h4>
+    <p class="result"></p>
+	<form id="registeruser">
+	<table>
+	<tr class="reg1">
+		<th>Username: </th>
+		<td>
+        <input id="login_input_username" data-corner="false" placeholder="Enter Username" class="login_input nameinput" type="text" name="user_name" required title="Enter Username" autocomplete="off">
+        </td>
+        <td><span class="choice"></span></td>
+	</tr>
+	<tr class="reg1">
+		<th>Gender: </th>
+		<td>
+	    <select name="gender" id="gender" data-native-menu="true" data-mini="true">
+        <option name="gender">Select Gender</option>
+        <option name="gender">Male</option>
+        <option name="gender">Female</option>
+    	</select>
+        </td>
+	</tr>    
+	<tr class="reg1">
+		<th>Mobile : </th>
+		<td><input placeholder="Enter Mobile" class="mobile" type="text" name="mobile" required title="Enter Mobile" autocomplete="off"></td> 
+        <td class='mobilere'></td>   
+	<tr class="reg1">
+		<th>Password: </th>
+		<td><input name="user_password" type="password" required class="pass" id="login_input_password" placeholder="Enter Password" title="Enter Password" autocomplete="off" ></td>
+	</tr>
+	<tr class="reg1">
+		<th>Retype Password: </th>
+		<td><input name="user_password_re" type="password" required class="passre" id="login_input_password" placeholder="Re-Enter Password" title="Enter Password" autocomplete="off" ></td>
+	</tr>
+	<tr class="reg1">
+		<th>Email: </th>
+		<td><input name="user_email" type="email" required class="login_input emailinput" data-corners="false" id="login_input_password" placeholder="Enter Email" autocomplete="off" title="Enter Password" autocomplete="off" ></td>
+        <td><span class="emailchoice"></span></td>
+	</tr>
+    <tr class="reg1">
+		<th></th>
+		<td><input type="button" class="next1" value="Next" data-corners="false"></td>
+	</tr>
+    
+    
+    <!-- Persoanl Information -->
+    <tr class="reg2 hide">
+		<th>First Name: </th>
+		<td><input  placeholder="Enter FirstName"  type="text" name="firstName" class="firstName" required title="Enter FirstName"></td>
+	</tr>
+	<tr class="reg2 hide">
+		<th>Last Name: </th>
+		<td><input  placeholder="Enter LastName"  type="text" name="lastName" required class="lastName" title="Enter LastName"></td>
+	</tr>
+	<tr class="reg2 hide">
+		<th>Date Of Birth: </th>
+		<td><input  placeholder="Birth 02-12-2014"  type="date" name="birth" required class="birth date" title="Date of Birth"></td>
+	</tr>
+    <tr class="reg2 hide">
+		<th><input type="button" class="back1" value="Back" data-corners="false"></th>
+		<td><input type="button" class="next2" value="Next" data-corners="false"></td>
+	</tr>
+    
+    <!-- Academic Information -->
+    <tr class="reg3 hide">
+		<td><select class='college' name='college' data-native-menu="true" data-mini="true"></select></td>
+	</tr>
+        <tr class="opt hide">
+    <td><input type="search" name="country" class="country" value="Tanzania" placeholder="Enter Country"></td>
+    </tr>
+	<tr class="reg3 hide">
+		<td>
+        <select name='year' class="year" data-native-menu="true" data-mini="true">
+        <option name="year" value="default">Select Year</option>
+		<option name="year">First Year</option>
+		<option name="year">Second Year</option>
+		<option name="year">Third Year</option>
+		<option name="year">Fourth Year</option>
+		</select></td>
+	</tr>
+	<tr class="reg3 hide">
+		<td><select class='level' name='level' data-native-menu="true" data-mini="true"></select></td>
+	</tr>
+    <tr class="reg3 hide">
+		<td><input type="button" class="next3" value="Next" data-corners="false"></td>
+	</tr>
+        <tr class="reg3 hide">
+		<th><input type="button" class="back2" value="Back" data-corners="false"></th>
+	</tr>
+    
+    
+    
+    <!-- Upload Your Images -->
+    <tr class="reg4 hide">
+		<th class="passre">Passport: </th>
+		<td><a href="javascript:;" class="usesample1">Tap to upload Later</a>
+        <input type="text" name="pass" class="hide image" value="sample.png">
+		</td>
+	</tr>
+	<tr class="reg4 hide">
+		<th class="idre">Scanned ID: </th>
+		<td><a href="javascript:;" class="usesample2">Tap to upload Later</a>
+        <input type="text" name="scanid" class="hide imageid" value="sample.png">
+		</td>
+	</tr>
+    <tr class="hide">
+		<th class="idre">Code: </th>
+		<td><input type="search" name="code" class="code" value="null">
+		</td>
+	</tr>
+    <tr class="hide reg4 agentcode">
+		<th class="agent">Agent Code</th>
+		<td><input type="search" name="code" class="code" placeholder="Ambassador Code">
+        <p><a href="javascript:;" class="dontcode">I dont have A Code</a></p>
+		</td>
+	</tr>
+    
+	<tr class="reg4 hide">
+		<th><input type="button" value="Back" class="back3" data-corners="false"></th>
+		<td><input type="submit"  name="login" value="Apply" class="button" data-corners="false"></td>
+	</tr>
+	</table>
+    <strong>Call Deux +255 652 403917 For Support.</strong>
+	</form>
+	</fieldset>
+    <p class="send"></p>
+    <hr>
+	</div>
+</div>
+
+<div data-role="page" id="agent">
+	<div data-role="header">
+		<h1>Ambassador</h1>
+        <a href="#progress">My Progress</a>
+	</div>
+	<div data-role="content" class="background">	
+	</div>
+    
+    <div class="more">
+    <p><strong>" Campus Life Card Team offers you an opportunity to make more money while you are still at Campus. "</strong></p>
+    <p>To become our Ambassador you need to apply for a Card. Once that is done, enter your username below to send us a Request. </p>
+    <p><input type="search" name="username" placeholder="Enter Your Username" class="regname"></p>
+    <input type="button" value="Request" class="request">
+    <p class="checkres"></p>
+    <p><strong>" Please Make sure you enter a registered username, otherwise your request won't be sent to our Servers. "</strong></p>
+    </div>
+</div>
+
+<div data-role="page" id="about" >
+	<div data-role="header">
+		<h1>Campus Life Card App</h1>
+	</div>
+	<div data-role="content" class="background">	
+		
+	</div>
+<!-- Application Footer -->
+<div class="more">
+Campus Life Card Team. Based in Dar es Salaam, office Located at Off Bagamoyo Road, Kijitonyama Plot No. 449 Block 44 |  P.O. Box 23390 | Dar es Salaam | Tanzania . More about Campus Life Card, contact <br><em><strong>info@campuslifetz.com</strong></em> <p> +255 652 403917 or +255 758 707370.</p>
+<strong>Application v1.2 - &copy CLC 2014</strong>
+<p><a href="http://www.campuslifetz.com" target="_new">Official Website</a> | <a href="https://www.facebook.com/campuslifetz?ref=hl">Like us On Facebook</a></p>
+</div>
+</div>
+
+
+
+<div data-role="page" id="progress">
+	<div data-role="header">
+		<h1>Enter your Code</h1>
+	</div>
+	<div data-role="content" class="background">	
+		"<strong>You want to manage Students you have registered :  <a href="http://www.agent.campuslifetz.com" data-role="none" class="link">Manage via a Portal</a></strong>"
+	</div>
+<!-- Application Footer -->
+<div class="more">Enter your Code below to view your Progress
+<strong>" View How many students you have registered and how much you made so far "</strong>
+<p><input type="search" placeholder="Enter Ambassador code" class="ambcode"></p>
+<input type="button" value="View Progress" class="view">
+<p class="resview">Progress will be shown here</p>
+</div>
+</div>
+
+</body>
+</html>

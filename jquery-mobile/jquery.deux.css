@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: 'Philosopher', sans-serif;
+}
+.logo{
+	padding: 5px;	
+}
+.background{
+		font-family: 'Philosopher', sans-serif;
+	height: 100%;
+background: rgb(0,183,234); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(0,183,234,1) 0%, rgba(0,158,195,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,183,234,1)), color-stop(100%,rgba(0,158,195,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+form {
+	padding: 10px;	
+background: rgb(254,255,255); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(210,235,249,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(254,255,255,1) 0%,rgba(210,235,249,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border-radius: 0px 0 0 2px;
+	box-sizing: border-box;
+	overflow: auto;
+}
+figure{
+	border-radius: 5px;	
+}
+figure img{
+	width: 110%;	
+}
+.hide{
+	display: none;	
+}
+table{
+	text-align: left;	
+}
+.heading{
+	padding: 10px;	
+	color: #000;
+	font-size: 20px;
+	padding-left: 10px;
+	background: #FFF;		
+	padding-left: 30px;
+	font-weight: bolder;
+}
+.font {
+	font-family: 'Philosopher', sans-serif;
+}
+input{
+	border-radius: 0;	
+	font-family: 'Philosopher', sans-serif;
+}
+.menu {
+	padding: 15px;	
+}
+.menu li a{
+	font-family: 'Philosopher', sans-serif;
+}
+table th{
+	padding: 10px;	
+}
+table td{
+		
+}
+table th a{
+	color: #FFF;	
+}
+.more {
+	padding: 30px;	
+	font-family: 'Philosopher', sans-serif;
+}
+
+.link:hover{
+	color: #FFF;	
+	text-decoration: none;
+}
